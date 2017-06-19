@@ -10,6 +10,9 @@
 # http://www.cwp.mines.edu/cwpcodes/
 
 # o simplemente copiando esto en su terminal: wget ftp://ftp.cwp.mines.edu/pub/cwpcodes/cwp_su_all_44R5.tgz
+# versión de instalación actual
+version=44R5
+
 
 export CWPROOT=$HOME/SU/
 export PATH=$PATH:$HOME/SU/bin/
@@ -64,7 +67,7 @@ fi
 
 echo "Copiando fuentes..."
 
-wget ftp://ftp.cwp.mines.edu/pub/cwpcodes/cwp_su_all_44R5.tgz
+wget ftp://ftp.cwp.mines.edu/pub/cwpcodes/cwp_su_all_$version.tgz
 mv cwp_su_all* $CWPROOT/
 
 cd $CWPROOT && tar -zxvf *.tgz
