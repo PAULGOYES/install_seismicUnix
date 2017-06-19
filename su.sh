@@ -57,7 +57,7 @@ then sudo apt-get install libxmu-dev libgl1-mesa-dev libglw1-mesa-dev libglu1-me
 
 elif cat /etc/issue | grep -i Fedora
 
-then su -c 'dnf -y install libXmu-devel mesa-libGL-devel mesa-libGLU-devel mesa-libGLw-devel freeglut-devel libXt-devel libXrender-devel libXrandr-devel libXi-devel libXinerama-devel libX11-devel' su -c  "dnf -y groupinstall "Development tools"'
+then su -c 'dnf -y install libXmu-devel mesa-libGL-devel mesa-libGLU-devel mesa-libGLw-devel freeglut-devel libXt-devel libXrender-devel libXrandr-devel libXi-devel libXinerama-devel libX11-devel' su -c  'dnf -y groupinstall "Development tools"'
 
 else echo "other Linux OS (not configured here). Good luck!"
 
