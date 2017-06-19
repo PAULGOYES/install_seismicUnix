@@ -3,29 +3,17 @@
 # Para su uso copia este script en la carpeta donde esta el comprimido
 # del fuente de Seismic Unix. Gracias por usar este script.
 
-
-
 # Elaborado por :e-mail: silva.l.a.l@gmail.com (A. L. Silva).
+# Modificado por: goyes.yesid@gmail.com /Jun/2017
 
-# Modificado por: goyes.yesid@gmail.com /oct/2016
-
-
-
-################# ----- ANTES DE INSTALAR EL PROGRAMA VERIFICAR QUE TENGA INSTALADO COMPILADORES C++ C FORTRAN #################
-
-# dnf groupinstall "Development tools" para Fedora.
-
-
-
-# Puede descargar el Archivo de instalacion directamente desde la pagina web del CWP MINES
+# Verificar la versión más reciente 
 # http://www.cwp.mines.edu/cwpcodes/
 
 # o simplemente copiando esto en su terminal: wget ftp://ftp.cwp.mines.edu/pub/cwpcodes/cwp_su_all_44R5.tgz
 
-
 export CWPROOT=$HOME/SU/
-
 export PATH=$PATH:$HOME/SU/bin/
+source ~/.bashrc
 
 # Creando directorio de trabajo...
 
@@ -54,12 +42,11 @@ if cat $HOME/.bashrc | grep CWPROOT
 then echo "OK"
 
 else echo "export CWPROOT=$HOME/SU" >> $HOME/.bashrc
-
+    
      echo "export PATH=$PATH:$HOME/SU/bin" >> $HOME/.bashrc
 
 fi
-
-
+source ~/.bashrc
 
 if cat /etc/issue | grep -i Ubuntu
 
@@ -67,7 +54,7 @@ then sudo apt-get install libxmu-dev libgl1-mesa-dev libglw1-mesa-dev libglu1-me
 
 elif cat /etc/issue | grep -i Fedora
 
-then su -c 'dnf -y install libXmu-devel mesa-libGL-devel mesa-libGLU-devel mesa-libGLw-devel freeglut-devel libXt-devel libXrender-devel libXrandr-devel libXi-devel libXinerama-devel libX11-devel'
+then su -c 'dnf -y install libXmu-devel mesa-libGL-devel mesa-libGLU-devel mesa-libGLw-devel freeglut-devel libXt-devel libXrender-devel libXrandr-devel libXi-devel libXinerama-devel libX11-devel' su -c  "dnf -y groupinstall "Development tools"'
 
 else echo "other Linux OS (not configured here). Good luck!"
 
@@ -77,7 +64,8 @@ fi
 
 echo "Copiando fuentes..."
 
-cp cwp_su_all* $CWPROOT/
+wget ftp://ftp.cwp.mines.edu/pub/cwpcodes/cwp_su_all_44R5.tgz
+mv cwp_su_all* $CWPROOT/
 
 cd $CWPROOT && tar -zxvf *.tgz
 
@@ -104,11 +92,6 @@ cd $CWPROOT/src && make xminstall
 echo "Aplicaciones Motif instaladas..."
 
 cd $CWPROOT/src && make sfinstall
-
-
-
-source ~/.bashrc
-
 clear
 
 exit 0
