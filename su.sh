@@ -1,7 +1,8 @@
 #!/bin/sh
 
-# Para su uso copia este script en la carpeta donde esta el comprimido
-# del fuente de Seismic Unix. Gracias por usar este script.
+# Este script descarga automáticamente la carpeta comprimida del instalador 
+# por lo tanto, se requiere una conexión a Internet . En caso de instalador sin Internet se debe descargar manualmente
+# el instalador (*.tgz) y copiarlo en la misma carpeta del script. Se debe comentar (#) la linea 72 de este script
 
 # Elaborado por :e-mail: silva.l.a.l@gmail.com (A. L. Silva).
 # Modificado por: goyes.yesid@gmail.com /Jun/2017
@@ -103,4 +104,5 @@ exit 0
 source ~/.bashrc
 alias brc='source ~/.bashrc'
 
+echo " copy and paste this in your terminal: source ~/.bashrc " 
 echo "All done!!, try.....$ suplane | suxwigb &  "
