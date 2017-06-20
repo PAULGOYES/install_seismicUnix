@@ -16,7 +16,8 @@ version=44R5
 
 export CWPROOT=$HOME/SU/
 export PATH=$PATH:$HOME/SU/bin/
-source ~/.bashrc
+alias brc='source ~/.bashrc'
+
 
 # Creando directorio de trabajo...
 
@@ -49,7 +50,7 @@ else echo "export CWPROOT=$HOME/SU" >> $HOME/.bashrc
      echo "export PATH=$PATH:$HOME/SU/bin" >> $HOME/.bashrc
 
 fi
-source ~/.bashrc
+alias brc='source ~/.bashrc'
 
 if cat /etc/issue | grep -i Ubuntu
 
@@ -100,5 +101,6 @@ clear
 exit 0
 
 source ~/.bashrc
+alias brc='source ~/.bashrc'
 
 echo "All done!!, try.....$ suplane | suxwigb &  "
