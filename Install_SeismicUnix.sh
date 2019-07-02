@@ -5,17 +5,18 @@
 # el instalador (*.tgz) y copiarlo en la misma carpeta del script. Se debe comentar (#) la linea 72 de este script
 
 # Elaborado por :e-mail: silva.l.a.l@gmail.com (A. L. Silva).
-# Modificado por: goyes.yesid@gmail.com /Jun/2017
+# Modificado por: goyes.yesid@gmail.com /Jun/2019
 
-# Verificar la versión más reciente 
-# http://www.cwp.mines.edu/cwpcodes/
 
-# o simplemente copiando esto en su terminal: wget ftp://ftp.cwp.mines.edu/pub/cwpcodes/cwp_su_all_44R5.tgz
+# PASO 1: DESCARGAR EL SEISMIC UNIX
+# Ir a la carpeta HOME
+# cd $HOME
+# Descargar seismic unix: git clone https://github.com/JohnWStockwellJr/SeisUnix.git
 # versión de instalación actual
 
 
 
-WPROOT=$HOME/SeisUnix
+CWPROOT=$HOME/SeisUnix
 
 export CWPROOT=$HOME/SeisUnix/
 export PATH=$PATH:$HOME/SeisUnix/bin/
