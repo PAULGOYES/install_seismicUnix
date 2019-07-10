@@ -37,7 +37,7 @@ else echo "export CWPROOT=$HOME/SeisUnix" >> $HOME/.bashrc
      echo "export PATH=$PATH:$HOME/SeisUnix/bin" >> $HOME/.bashrc
 fi
 
-if cat /etc/issue | grep -i Ubuntu 
+if cat /etc/os-release | grep -i Ubuntu 
 then sudo apt-get install libxmu-dev libgl1-mesa-dev libglw1-mesa-dev libglu1-mesa-dev libxt-dev libxrender-dev libxrandr-dev libxi-dev libxinerama-dev libx11-dev libxm4 libuil4 libmrm4 libmotif-common
 
 elif cat /etc/fedora-release | grep -i Fedora
