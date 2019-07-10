@@ -8,6 +8,7 @@ https://github.com/JohnWStockwellJr/SeisUnix
 
 STEP 1: download Seismic unix in Home folder:
 >> cd $HOME
+
 >> git clone https://github.com/JohnWStockwellJr/SeisUnix.git
 
 STEP 2: run the shell script
