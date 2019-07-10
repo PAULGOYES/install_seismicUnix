@@ -11,8 +11,12 @@ STEP 1: download Seismic unix in Home folder:
 >> git clone https://github.com/JohnWStockwellJr/SeisUnix.git
 
 STEP 2: run the shell script
->> sh InstallSeismicUnix.sh
+>> sh install-sh.sh
+
+
 IMPORTANT: After installation please copy and paste into TERMINAL the next line:
+
+
 source ~/.bashrc
 
 
