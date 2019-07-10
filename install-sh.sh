@@ -4,8 +4,8 @@
 # por lo tanto, se requiere una conexión a Internet . En caso de instalador sin Internet se debe descargar manualmente
 # el instalador (*.tgz) y copiarlo en la misma carpeta del script. Se debe comentar (#) la linea 72 de este script
 
-# Elaborado por :e-mail: silva.l.a.l@gmail.com (A. L. Silva).
-# Modificado por: goyes.yesid@gmail.com /Jun/2019
+# Elaborado por :e-mail: silva.l.a.l@gmail.com (A. L. Silva). 2012
+# Modificado por: goyes.yesid@gmail.com 10/Jul/2019
 
 
 # PASO 1: DESCARGAR EL SEISMIC UNIX
@@ -37,11 +37,11 @@ else echo "export CWPROOT=$HOME/SeisUnix" >> $HOME/.bashrc
      echo "export PATH=$PATH:$HOME/SeisUnix/bin" >> $HOME/.bashrc
 fi
 
-if cat /etc/os-release | grep -i Ubuntu 
+if cat /etc/os-release  | grep -i Ubuntu 
 then sudo apt-get install libxmu-dev libgl1-mesa-dev libglw1-mesa-dev libglu1-mesa-dev libxt-dev libxrender-dev libxrandr-dev libxi-dev libxinerama-dev libx11-dev libxm4 libuil4 libmrm4 libmotif-common
 
-elif cat /etc/fedora-release | grep -i Fedora
-then sudo dnf -y install libXmu-devel mesa-libGL-devel mesa-libGLU-devel mesa-libGLw-devel freeglut-devel libXt-devel libXrender-devel libXrandr-devel libXi-devel libXinerama-devel libX11-devel gcc gcc* libx* libX*
+elif cat /etc/os-release  | grep -i Fedora
+then su -c 'dnf -y install libXmu-devel mesa-libGL-devel mesa-libGLU-devel mesa-libGLw-devel freeglut-devel libXt-devel libXrender-devel libXrandr-devel libXi-devel libXinerama-devel libX11-devel'
 
 else echo "other Linux OS (not configured here). Good luck!"
 fi
