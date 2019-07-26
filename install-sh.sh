@@ -41,7 +41,7 @@ if cat /etc/os-release  | grep -i Ubuntu
 then sudo apt-get install libxmu-dev libgl1-mesa-dev libglw1-mesa-dev libglu1-mesa-dev libxt-dev libxrender-dev libxrandr-dev libxi-dev libxinerama-dev libx11-dev libxm4 libuil4 libmrm4 libmotif-common
 
 elif cat /etc/os-release  | grep -i Fedora
-then su -c 'dnf -y install libXmu-devel mesa-libGL-devel mesa-libGLU-devel mesa-libGLw-devel freeglut-devel libXt-devel libXrender-devel libXrandr-devel libXi-devel libXinerama-devel libX11-devel'
+then sudo dnf -y install libXmu-devel mesa-libGL-devel mesa-libGLU-devel mesa-libGLw-devel freeglut-devel libXt-devel libXrender-devel libXrandr-devel libXi-devel libXinerama-devel libX11-devel
 
 else echo "other Linux OS (not configured here). Good luck!"
 fi
@@ -61,4 +61,7 @@ echo "Libcwputils instalados..."
 cd $CWPROOT/src && make xminstall
 echo "Aplicaciones Motif instaladas..."
 cd $CWPROOT/src && make sfinstall
-echo "All done!!, restart the shell to start using SU..."
+clear
+echo "Finalizado!!, escriba en la terminal: source ~/.bashrc "
+echo "Comprobar instalación escribiendo: "
+echo "suplane | suxwigb title='my first graph' & "
