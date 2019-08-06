@@ -11,7 +11,9 @@
 # PASO 1: DESCARGAR EL SEISMIC UNIX
 # Ir a la carpeta HOME
 # cd $HOME
-# Descargar seismic unix: git clone https://github.com/JohnWStockwellJr/SeisUnix.git
+# Descargar seismic unix:  wget https://github.com/JohnWStockwellJr/SeisUnix/archive/master.zip
+# unzip master.zip
+# mv SeisUnix-master SeisUnix
 # versión de instalación actual
 
 
@@ -46,7 +48,7 @@ then sudo dnf -y install libXmu-devel mesa-libGL-devel mesa-libGLU-devel mesa-li
 else echo "other Linux OS (not configured here). Good luck!"
 fi
 
-#git clone https://github.com/JohnWStockwellJr/SeisUnix.git
+# wget https://github.com/JohnWStockwellJr/SeisUnix/archive/master.zip
 #cd $CWPROOT && tar -xvzf *.tar.gz
 
 echo "Entrando en directorio de trabajo y compilando..."
