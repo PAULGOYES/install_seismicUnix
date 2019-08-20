@@ -64,6 +64,22 @@ cd $CWPROOT/src && make xminstall
 echo "Aplicaciones Motif instaladas..."
 cd $CWPROOT/src && make sfinstall
 clear
+clear
+pause
+
+cd $CWPROOT/src && make remake
+cd $CWPROOT/src/tri && make 
+cd $CWPROOT/src/Trielas && make
+cd $CWPROOT/src/xplot && make
+cd $CWPROOT/src/xtri && make
+cd $CWPROOT/src/su && make
+cd $CWPROOT/src/par && make
+cd $CWPROOT/src/Fortran && make remake
+clear
+echo "Finalizado!!, escriba en la terminal: source ~/.bashrc "
+echo "Comprobar instalación escribiendo: "
+echo "suplane | suxwigb title='my first graph' & "
+
 echo "Finalizado!!, escriba en la terminal: source ~/.bashrc "
 echo "Comprobar instalación escribiendo: "
 echo "suplane | suxwigb title='my first graph' & "
